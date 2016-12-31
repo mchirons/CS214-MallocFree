@@ -1,0 +1,888 @@
+Testing
+-------
+
+Each test is performed 100 times
+Note: values will be different for some tests due to the randomized number used for size and data. Below is expected output of memgrind.
+
+
+
+./memgrind <any args>
+
+	Correct usage: 
+	./memgrind
+
+./memgrind
+
+	Each test is performed 100 times
+
+	Error messages . . . 
+
+
+	TEST1...
+	TEST 1, malloc 1 byte 3000 times:
+	Total mallocs: 300000
+	Successful mallocs: 166500
+	Total frees: 166500
+	AVG Time Elasped: 225973 microseconds.
+	TEST PASSED
+
+	TEST2...
+	TEST 2, malloc 1 byte 3000 times and free immediately:
+	Total mallocs: 300000
+	Successful mallocs: 300000
+	Total frees: 300000
+	Successful frees: 300000
+	AVG Time Elasped: 296 microseconds.
+	TEST PASSED
+
+	TEST3...
+	TEST 3, Randomly choose between a malloc() of size 1 or free() 6000 times:
+	Total mallocs: 300000
+	Successful mallocs: 300000
+	Frees: 300000
+	Avg Time Elasped: 4128 microseconds.
+	TEST PASSED
+
+	More Error messages . . . 
+
+	TEST4...
+	TEST 4, Randomly choose between a randomly sized malloc() or free() 6000 times:
+	Total mallocs: 300000
+	Successful mallocs: 187586
+	Frees: 187586
+	Avg Time Elasped: 29623 microseconds.
+	TEST PASSED
+
+	TEST5...
+	TEST 5, call malloc of increasing size starting at 1 and incrementing by 1. 50 iterations
+	Total mallocs: 5000
+	Successful mallocs: 4995
+	Frees: 4995
+	AVG Time Elasped: 4 microseconds.
+	TEST PASSED
+
+	TEST6...
+	TEST 6, Malloc various primitive type pointers dereference with values and use the printf function with them:
+	int = 47
+	char = B
+	long = 351
+	long int = 303
+	double = 122.486486
+	long double = 71.153846
+
+
+	int = 67
+	char = O
+	long = 713
+	long int = 351
+	double = 82.500000
+	long double = 213.000000
+
+
+	int = 14
+	char = A
+	long = 953
+	long int = 169
+	double = 87.428571
+	long double = 41.055556
+
+
+	int = 45
+	char = G
+	long = 187
+	long int = 859
+	double = 126.720000
+	long double = 263.727273
+
+
+	int = 32
+	char = Y
+	long = 405
+	long int = 226
+	double = 25.627119
+	long double = 18.371134
+
+
+	int = 15
+	char = B
+	long = 323
+	long int = 10
+	double = 59.795918
+	long double = 3.219178
+
+
+	int = 51
+	char = A
+	long = 904
+	long int = 878
+	double = 29.457143
+	long double = 31.939394
+
+
+	int = 62
+	char = P
+	long = 520
+	long int = 248
+	double = 429.000000
+	long double = 97.277778
+
+
+	int = 3
+	char = T
+	long = 404
+	long int = 335
+	double = 22.750000
+	long double = 30.700000
+
+
+	int = 83
+	char = Q
+	long = 508
+	long int = 416
+	double = 11.327273
+	long double = 11.920635
+
+
+	int = 56
+	char = B
+	long = 512
+	long int = 762
+	double = 21.526882
+	long double = 1058.500000
+
+
+	int = 54
+	char = Y
+	long = 262
+	long int = 401
+	double = 3.655738
+	long double = 361.750000
+
+
+	int = 37
+	char = Z
+	long = 412
+	long int = 715
+	double = 51.666667
+	long double = 18.631579
+
+
+	int = 35
+	char = S
+	long = 991
+	long int = 474
+	double = 98.714286
+	long double = 6.566265
+
+
+	int = 19
+	char = Q
+	long = 594
+	long int = 595
+	double = 1387.500000
+	long double = 304.600000
+
+
+	int = 97
+	char = W
+	long = 499
+	long int = 6
+	double = 303.125000
+	long double = 4.894118
+
+
+	int = 6
+	char = M
+	long = 568
+	long int = 805
+	double = 13.717949
+	long double = 33.839286
+
+
+	int = 50
+	char = J
+	long = 37
+	long int = 778
+	double = 169.800000
+	long double = 43.571429
+
+
+	int = 77
+	char = F
+	long = 298
+	long int = 323
+	double = 12.300000
+	long double = 110.789474
+
+
+	int = 78
+	char = X
+	long = 189
+	long int = 264
+	double = 184.740741
+	long double = 98.000000
+
+
+	int = 77
+	char = R
+	long = 864
+	long int = 982
+	double = 93.200000
+	long double = 28.406250
+
+
+	int = 61
+	char = P
+	long = 746
+	long int = 121
+	double = 101.444444
+	long double = 82.440000
+
+
+	int = 56
+	char = D
+	long = 822
+	long int = 781
+	double = 6.041667
+	long double = 59.506173
+
+
+	int = 16
+	char = D
+	long = 72
+	long int = 159
+	double = 111.947368
+	long double = 54.550000
+
+
+	int = 88
+	char = C
+	long = 175
+	long int = 341
+	double = 22.513889
+	long double = 16.612903
+
+
+	int = 30
+	char = B
+	long = 56
+	long int = 33
+	double = 23.272727
+	long double = 27.729167
+
+
+	int = 0
+	char = J
+	long = 750
+	long int = 32
+	double = 41.985915
+	long double = 55.289474
+
+
+	int = 87
+	char = X
+	long = 918
+	long int = 292
+	double = 36.500000
+	long double = 25.000000
+
+
+	int = 22
+	char = R
+	long = 319
+	long int = 542
+	double = 30.174603
+	long double = 35.147059
+
+
+	int = 68
+	char = N
+	long = 718
+	long int = 92
+	double = 83.200000
+	long double = 7.238095
+
+
+	int = 60
+	char = V
+	long = 451
+	long int = 200
+	double = 90.344828
+	long double = 122.871795
+
+
+	int = 20
+	char = W
+	long = 683
+	long int = 307
+	double = 3.647059
+	long double = 61.826087
+
+
+	int = 83
+	char = P
+	long = 773
+	long int = 207
+	double = 46.360000
+	long double = 48.989011
+
+
+	int = 79
+	char = P
+	long = 6
+	long int = 201
+	double = 613.857143
+	long double = 67.456522
+
+
+	int = 88
+	char = B
+	long = 663
+	long int = 401
+	double = 29.354839
+	long double = 69.491228
+
+
+	int = 50
+	char = M
+	long = 876
+	long int = 510
+	double = 200.687500
+	long double = 78.787234
+
+
+	int = 77
+	char = N
+	long = 678
+	long int = 996
+	double = 67.017544
+	long double = 82.690909
+
+
+	int = 18
+	char = X
+	long = 751
+	long int = 37
+	double = 132.810811
+	long double = 29.104651
+
+
+	int = 44
+	char = E
+	long = 262
+	long int = 808
+	double = 654.000000
+	long double = 67.178571
+
+
+	int = 53
+	char = G
+	long = 793
+	long int = 170
+	double = 38.792453
+	long double = 177.944444
+
+
+	int = 4
+	char = I
+	long = 170
+	long int = 810
+	double = 554.500000
+	long double = 256.714286
+
+
+	int = 100
+	char = C
+	long = 103
+	long int = 978
+	double = 40.133333
+	long double = 45.565217
+
+
+	int = 77
+	char = C
+	long = 733
+	long int = 552
+	double = 70.000000
+	long double = 61.338235
+
+
+	int = 36
+	char = Q
+	long = 854
+	long int = 772
+	double = 16.244898
+	long double = 225.333333
+
+
+	int = 82
+	char = D
+	long = 15
+	long int = 699
+	double = 25.763158
+	long double = 201.210526
+
+
+	int = 48
+	char = W
+	long = 169
+	long int = 967
+	double = 2356.000000
+	long double = 185.750000
+
+
+	int = 10
+	char = Q
+	long = 791
+	long int = 261
+	double = 59.096774
+	long double = 472.100000
+
+
+	int = 25
+	char = U
+	long = 865
+	long int = 410
+	double = 17.987654
+	long double = 279.636364
+
+
+	int = 93
+	char = Q
+	long = 803
+	long int = 122
+	double = 0.473684
+	long double = 32.020408
+
+
+	int = 43
+	char = M
+	long = 457
+	long int = 906
+	double = 70.000000
+	long double = 12.016667
+
+
+	int = 98
+	char = Y
+	long = 859
+	long int = 706
+	double = 34.925000
+	long double = 49.283951
+
+
+	int = 60
+	char = R
+	long = 219
+	long int = 893
+	double = 28.518072
+	long double = 124.450000
+
+
+	int = 46
+	char = U
+	long = 523
+	long int = 471
+	double = 22.000000
+	long double = 60.075000
+
+
+	int = 32
+	char = K
+	long = 706
+	long int = 810
+	double = 45.094118
+	long double = 27.527027
+
+
+	int = 79
+	char = G
+	long = 444
+	long int = 344
+	double = 13.920000
+	long double = 11.432836
+
+
+	int = 91
+	char = J
+	long = 563
+	long int = 379
+	double = 18.482143
+	long double = 58.149254
+
+
+	int = 35
+	char = H
+	long = 143
+	long int = 722
+	double = 63.363636
+	long double = 56.673913
+
+
+	int = 52
+	char = F
+	long = 269
+	long int = 289
+	double = 5.705882
+	long double = 1.627907
+
+
+	int = 95
+	char = M
+	long = 206
+	long int = 13
+	double = 99.333333
+	long double = 55.129032
+
+
+	int = 73
+	char = G
+	long = 1000
+	long int = 940
+	double = 51.551282
+	long double = 191.125000
+
+
+	int = 8
+	char = T
+	long = 882
+	long int = 220
+	double = 107.350000
+	long double = 89.447368
+
+
+	int = 63
+	char = Y
+	long = 670
+	long int = 708
+	double = 44.700000
+	long double = 50.070175
+
+
+	int = 17
+	char = U
+	long = 582
+	long int = 886
+	double = 25.222222
+	long double = 29.430233
+
+
+	int = 51
+	char = N
+	long = 808
+	long int = 316
+	double = 33.809524
+	long double = 64.351351
+
+
+	int = 17
+	char = J
+	long = 585
+	long int = 32
+	double = 140.962963
+	long double = 53.000000
+
+
+	int = 21
+	char = C
+	long = 100
+	long int = 840
+	double = 58.313433
+	long double = 21.526316
+
+
+	int = 45
+	char = Z
+	long = 838
+	long int = 584
+	double = 36.714286
+	long double = 29.363636
+
+
+	int = 85
+	char = G
+	long = 84
+	long int = 133
+	double = 60.607143
+	long double = 29.294118
+
+
+	int = 92
+	char = C
+	long = 885
+	long int = 680
+	double = 58.033333
+	long double = 6.392857
+
+
+	int = 38
+	char = E
+	long = 402
+	long int = 162
+	double = 52.000000
+	long double = 19.758621
+
+
+	int = 81
+	char = Y
+	long = 874
+	long int = 59
+	double = 44.787879
+	long double = 276.000000
+
+
+	int = 59
+	char = X
+	long = 278
+	long int = 264
+	double = 30.740260
+	long double = 15.000000
+
+
+	int = 86
+	char = A
+	long = 72
+	long int = 207
+	double = 99.866667
+	long double = 56.573529
+
+
+	int = 31
+	char = E
+	long = 844
+	long int = 157
+	double = 51.705263
+	long double = 28.692308
+
+
+	int = 91
+	char = I
+	long = 844
+	long int = 206
+	double = 48.313433
+	long double = 73.125000
+
+
+	int = 58
+	char = Q
+	long = 498
+	long int = 57
+	double = 33.163934
+	long double = 83.259259
+
+
+	int = 62
+	char = N
+	long = 471
+	long int = 917
+	double = 138.625000
+	long double = 30.459184
+
+
+	int = 41
+	char = L
+	long = 138
+	long int = 393
+	double = 33.813559
+	long double = 28.677419
+
+
+	int = 91
+	char = A
+	long = 516
+	long int = 555
+	double = 40.290698
+	long double = 140.785714
+
+
+	int = 50
+	char = H
+	long = 334
+	long int = 900
+	double = 57.756410
+	long double = 15.711538
+
+
+	int = 30
+	char = Q
+	long = 433
+	long int = 972
+	double = 1092.750000
+	long double = 164.172414
+
+
+	int = 47
+	char = C
+	long = 679
+	long int = 871
+	double = 39.835294
+	long double = 15.517241
+
+
+	int = 88
+	char = S
+	long = 139
+	long int = 571
+	double = 30.565217
+	long double = 706.833333
+
+
+	int = 21
+	char = E
+	long = 958
+	long int = 115
+	double = 402.916667
+	long double = 117.148148
+
+
+	int = 76
+	char = B
+	long = 244
+	long int = 629
+	double = 24.200000
+	long double = 80.228070
+
+
+	int = 28
+	char = P
+	long = 439
+	long int = 964
+	double = 36.241935
+	long double = 83.151515
+
+
+	int = 31
+	char = R
+	long = 899
+	long int = 877
+	double = 41.675676
+	long double = 56.301205
+
+
+	int = 93
+	char = X
+	long = 947
+	long int = 896
+	double = 1.155172
+	long double = 10.935065
+
+
+	int = 65
+	char = K
+	long = 398
+	long int = 742
+	double = 98.096774
+	long double = 17.415730
+
+
+	int = 91
+	char = T
+	long = 859
+	long int = 355
+	double = 44.829268
+	long double = 50.161765
+
+
+	int = 9
+	char = P
+	long = 559
+	long int = 713
+	double = 33.326531
+	long double = 104.615385
+
+
+	int = 38
+	char = M
+	long = 151
+	long int = 399
+	double = 10.781250
+	long double = 11.816901
+
+
+	int = 73
+	char = O
+	long = 456
+	long int = 340
+	double = 57.789474
+	long double = 15.076923
+
+
+	int = 52
+	char = C
+	long = 138
+	long int = 883
+	double = 30.609756
+	long double = 47.066667
+
+
+	int = 40
+	char = D
+	long = 311
+	long int = 728
+	double = 36.317647
+	long double = 4917.000000
+
+
+	int = 34
+	char = D
+	long = 402
+	long int = 415
+	double = 39.877193
+	long double = 33.947368
+
+
+	int = 13
+	char = P
+	long = 527
+	long int = 14
+	double = 23.105263
+	long double = 46.406977
+
+
+	int = 86
+	char = Y
+	long = 749
+	long int = 359
+	double = 118.343750
+	long double = 299.125000
+
+
+	int = 44
+	char = G
+	long = 886
+	long int = 54
+	double = 7.137931
+	long double = 6.127660
+
+
+	int = 0
+	char = L
+	long = 886
+	long int = 459
+	double = 76.500000
+	long double = 189.823529
+
+	AVG Time Elasped: 113 microseconds.
+	TEST PASSED
+
+	Lastly, Bonus Test
+
+	These tests produce the output to the examples in the assignment
+	instructions except for part of case B (see note).
+
+	A. Free()ing addresses that are not pointers:
+	ERROR: Invalid pointer in FILE: memgrind.c at LINE: 412
+
+	B. Free()ing pointers that were not allocated by malloc():
+	(Note) We removed the test to check for freeing uninitialized pointers 
+	because of the compiler warning caused by the -Wall tag. Our
+	myfree functionwill detect this however if you want to test it yourself.
+
+	ERROR: Double free or pointer not allocated in FILE: memgrind.c at LINE: 418
+
+	C. Redundant free()ing of the same pointer:
+	ERROR: Double free or pointer not allocated in FILE: memgrind.c at LINE: 427
+
+	D. Saturation of dynamic memory :
+	ERROR: Not enough free space for malloc in FILE: memgrind.c LINE: 436 
+	ERROR: Not enough free space for malloc in FILE: memgrind.c LINE: 440 
